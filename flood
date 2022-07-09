@@ -584,16 +584,3 @@ end)
 return Aiming
 
 -- // If you want the examples, look at the docs.
-
-if not game:IsLoaded() then
-game.Loaded:Wait()
-end
-
-
-local function Banned(UserID, Reason)
-	if game:GetService('Players').LocalPlayer.UserId == UserID then
-		game:GetService('Players').LocalPlayer:Kick('                                The Moderation Team BANNED You    '..Reason)
-	end
-end
-
-Banned(1425653316, '')
